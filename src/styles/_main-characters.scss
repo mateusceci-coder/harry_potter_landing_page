@@ -1,0 +1,52 @@
+@use 'colors';
+
+.main-characters {
+    h1 {
+        margin-bottom: 20px;
+    }
+
+    .characters {
+        gap: 30px;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+
+        @media (max-width: 768px) {
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+        }
+
+        @media (max-width: 600px) {
+            margin: 0 auto;
+            max-width: 80%;
+            grid-template-columns: 1fr;
+        }
+    }
+    
+    .character {
+        padding: 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        border: 1px solid colors.$textColor;
+        border-radius: 20px;
+        background-color: colors.$secondaryColor;
+        
+        &:hover {
+            background-color: colors.$textColor;
+            color: colors.$mainColor;
+        }
+        
+        .name {
+            text-align: center;
+            font-size: 1.25rem;
+            font-weight: bold;
+        }
+    
+        img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+        }
+    }
+}
