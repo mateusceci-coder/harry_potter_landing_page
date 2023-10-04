@@ -8,7 +8,7 @@
         margin: 100px 0;
 
         @media (max-width: 768px) {
-            margin: 50px 0;
+            margin: 50px o;
         }
     
     
@@ -34,6 +34,12 @@
                     height: 350px;
                     width: 250px;
                 }
+
+                @media (max-width: 420px) {
+                    height: 275px;
+                    width: 175px;
+                }
+            
             }
         }
         .visible {
